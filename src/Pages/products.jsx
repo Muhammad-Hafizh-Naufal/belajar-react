@@ -1,4 +1,5 @@
 import CardProduct from "../components/Fragments/CardProduct";
+import Button from "../components/Elements/Button/Index";
 
 // Dummy Data
 const product = [
@@ -40,9 +41,26 @@ const product = [
   },
 ];
 
+const email = localStorage.getItem("email");
+
 export default function ProductsPage() {
+  const handleLogout = () => {
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    window.location.href = "/login";
+  };
   return (
     <>
+      <div className="flex items-center justify-end px-5 bg-yellow-800 h-20 text-xl font-bold  ">
+        {email}
+        <Button
+          classname="bg-yellow-900 mx-5 text-white"
+          type="click"
+          onClick={handleLogout}
+        >
+          Logout
+        </Button>
+      </div>
       <div className="flex justify-center flex-wrap gap-5 py-5 ">
         {product.map((product) => (
           <CardProduct key={product.id}>
