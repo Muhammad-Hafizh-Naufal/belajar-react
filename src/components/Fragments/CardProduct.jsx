@@ -29,11 +29,16 @@ const CardBody = (props) => {
 };
 
 const CardFooter = (props) => {
-  const { price } = props;
+  const { price, handleAddToCart, id } = props;
   return (
     <div className="flex items-center justify-between py-5 px-6">
-      <span className="text-xl font-bold text-gray-900">{price}</span>
-      <Button classname="bg-amber-500">Masukan Keranjang</Button>
+      <span className="text-xl font-bold text-gray-900">
+        Rp{" "}
+        {price.toLocaleString("id-ID", { styles: "currency", currency: "IDR" })}
+      </span>
+      <Button classname="bg-amber-500" onClick={() => handleAddToCart(id)}>
+        Masukan Keranjang
+      </Button>
     </div>
   );
 };
