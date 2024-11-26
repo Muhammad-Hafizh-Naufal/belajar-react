@@ -102,7 +102,7 @@ export default function ProductsPage() {
               <CardProduct.CardBody name={product.name}>
                 {product.description}
               </CardProduct.CardBody>
-              <CardProduct.CardFooter
+              <CardProduct.CardFooter 
                 price={product.price}
                 id={product.id}
                 handleAddToCart={handleAddToCart}

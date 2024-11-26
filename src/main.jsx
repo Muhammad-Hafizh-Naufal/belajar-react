@@ -8,11 +8,12 @@ import LoginPage from "./Pages/login.jsx";
 import RegisterPage from "./Pages/register.jsx";
 import NotFoundPage from "./Pages/404.jsx";
 import ProductsPage from "./Pages/products.jsx";
+import Home from "./Pages/home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>Home Page</h1>,
+    element: <Home />,
     errorElement: <NotFoundPage />,
   },
   {
