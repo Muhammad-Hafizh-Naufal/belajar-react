@@ -9,11 +9,29 @@ import RegisterPage from "./Pages/register.jsx";
 import NotFoundPage from "./Pages/404.jsx";
 import ProductsPage from "./Pages/products.jsx";
 import Home from "./Pages/home.jsx";
+import Quiz from "./Pages/question.jsx";
+import CategoryList from "./Pages/CategoryList.jsx";
+import QQuiz from "./Pages/quiz.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/quiz",
+    element: <Quiz />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/CategoryList",
+    element: <CategoryList />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/quiz/:categoryName",
+    element: <QQuiz />,
     errorElement: <NotFoundPage />,
   },
   {
