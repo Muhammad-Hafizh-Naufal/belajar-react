@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import categories from "../api/question.json";
+import { useNavigate } from "react-router-dom"; // untuk menavigasi halaman
+import categories from "../api/question.json"; // manggil data api/json
 
-const CategoryList = () => {
+export default function CategoryList() {
   const navigate = useNavigate();
 
   const handleStartQuiz = (categoryName) => {
@@ -39,6 +39,4 @@ const CategoryList = () => {
       </div>
     </div>
   );
-};
-
-export default CategoryList;
+}

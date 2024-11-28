@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import categories from "../api/question.json";
 
-const Quiz = () => {
+export default function Quiz() {
   const { categoryName } = useParams();
   const category = categories.find((cat) => cat.name === categoryName);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -62,6 +62,4 @@ const Quiz = () => {
       </div>
     </div>
   );
-};
-
-export default Quiz;
+}
